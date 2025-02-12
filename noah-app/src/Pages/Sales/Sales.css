@@ -1,0 +1,460 @@
+ body {
+    margin: 0;
+    padding: 0;
+  }
+  .add-sale {
+    height: 900px;
+    max-width: 1900px;
+    margin-left: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .add-sale h2{
+    margin-top: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  .go-to-listproductbx{
+    height: 80px;
+    width: 200px;
+    margin-top: -50px;
+  }
+  .go-to-listproduct{
+    margin-left: 1400px;
+    margin-top: -200px;
+    width: 200px;
+    height: 45px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #7d4cdb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+  
+  /* Horizontal Form Section */
+  .addsale-form-section {
+    margin-top: -25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .addsale-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .addsale-form-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .addsale-form-section input,
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+  }
+  
+  .addsale-form-section input:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+   
+  /* Product Section - Horizontal */
+   .addsale-product-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .addsale-product-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .addsale-product-row input {
+    flex: 1;
+    padding: 8px;
+  }
+  
+  .addsale-add-btn,
+  .addsale-remove-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:  #dc3545;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .addsale-remove-btn:hover {
+    background-color:  #a71d2a;
+  }
+  
+  .addsale-add-btn {
+    background-color: #007bff;
+  }
+  
+  .addsale-add-btn:hover {
+    background-color: #0056b3 ;
+  }
+   
+  /* Account Section - Grid Layout */
+   .addsale-account-section h3{
+    margin: 0px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+  .addsale-account-section {
+    margin-top: -40px;
+    background-color: #ddd;
+    display: grid;
+    float: right;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 20px;
+  }
+  
+  .addsale-account-section .form-group {
+    margin-bottom: 0; 
+  }
+  
+  .addsale-account-section label {
+    display: block;
+  }
+  
+  .addsale-account-section input,
+  select {
+    width: 100%;
+  }
+   
+  /* Action Buttons */
+   .addsale-action-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .addsale-submit-btn,
+  .addsale-close-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    margin: 350px 50px;
+
+    transition: background-color 0.3s;
+  }
+  
+  .addsale-submit-btn {
+    background-color: #28a745;
+  }
+  
+  .addsale-submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .addsale-close-btn {
+    background-color: #ffc107;
+  }
+  
+  .addsale-close-btn:hover {
+    background-color: #e0a800;
+  } 
+
+/*  List Sale css code here  */
+  .list-sale {
+    height: 910px;
+    max-width: 1900px;
+    margin-left: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  .go-to-addsalebx{
+    height: 80px;
+    width: 200px;
+    margin-top: -50px;
+  }
+  .go-to-addsale{
+    margin-left: 1400px;
+    margin-top: -400px;
+    width: 200px;
+    height: 45px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #7d4cdb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+
+.list-sale h2 {
+  margin-left: 40px;
+  margin-top: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+ .list-sale .export-buttons {
+  margin-bottom: 20px;
+}
+
+.list-sale .export-buttons button {
+  margin-left: 250px;
+  width: 200px;
+  height: 45px;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #7d4cdb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} 
+
+
+
+/*  AddSaleReturn Component css code here  */
+
+/* AddSaleReturn.css */
+
+/* General Styles */
+.add-sale-return {
+  margin-left: 180px; 
+  font-family: Arial, sans-serif;
+  height: 910px;
+  max-width: 1900px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-sale-return h2 {
+  margin-left: 40px;
+  margin-top: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.go-to-returnlistbx{
+  height: 80px;
+  width: 200px;
+  margin-top: -50px;
+}
+.go-to-returnlist{
+  margin-left: 1400px;
+  margin-top: -400px;
+  width: 200px;
+  height: 45px;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #7d4cdb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+/* Form Section Styles */
+.add-sale-return .addsale-form-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.add-sale-return .addsale-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-sale-return .addsale-form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-sale-return .addsale-form-group input,
+.add-sale-return .addsale-form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-sale-return .addsale-form-group input:focus,
+.add-sale-return .addsale-form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Product Section Styles */
+.add-sale-return .addsale-product-section {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.add-sale-return .addsale-product-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-sale-return .addsale-product-row select,
+.add-sale-return .addsale-product-row input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-sale-return .addsale-product-row button {
+  padding: 6px 12px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-sale-return .addsale-product-row button:hover {
+  background-color: #ff0000;
+}
+
+.add-sale-return .addsale-add-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-sale-return .addsale-add-btn:hover {
+  background-color: #218838;
+}
+
+/* Account Section Styles */
+.add-sale-return .addsale-account-section {
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+
+.add-sale-return .addsale-account-section .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.add-sale-return .addsale-account-section .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-sale-return .addsale-account-section .form-group input,
+.add-sale-return .addsale-account-section .form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-sale-return .addsale-account-section .form-group input:focus,
+.add-sale-return .addsale-account-section .form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Styles */
+.add-sale-return .addsale-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.add-sale-return .addsale-buttons .addsale-submit-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-sale-return .addsale-buttons .addsale-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-sale-return .addsale-buttons .addsale-close-btn {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-sale-return .addsale-buttons .addsale-close-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Return list code  */
+
+.go-to-addreturnbx{
+  height: 80px;
+  width: 200px;
+  margin-top: -50px;
+}
+.go-to-addreturn{
+  margin-left: 1400px;
+  margin-top: -400px;
+  width: 200px;
+  height: 45px;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #7d4cdb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}

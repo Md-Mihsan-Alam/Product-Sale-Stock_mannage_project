@@ -1,0 +1,26 @@
+  .dashboard-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+  }
+  .dashboard-card .card-icon{
+    font-size: 20px;
+    margin-top: -10px;
+    margin-right: 20px;
+  }
+  .dashboard-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+
+
+  
