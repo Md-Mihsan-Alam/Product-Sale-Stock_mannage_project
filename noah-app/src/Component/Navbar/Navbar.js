@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css"
-import { FaBell, FaCog, FaEnvelope, FaUser } from "react-icons/fa";
+import "./NavbarMobile.css"
+import { FaBell, FaCog, FaEnvelope, FaUser, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+  
+
+  
   return (
-    <div className="navbar">
-      <div className="navbar-left">
-        <div className="search-bar">
-          <input type="text" className="NavSearch" placeholder="Search....." />
-        </div>
+    <>
+
+      <div className="navbar">
+        <div className="navbar-left">
+
+          <div className="search-bar">
+            <input type="text" className="NavSearch" placeholder="Search....." />
+          </div>
         <ul className="menu">
           <li><Link to={"/dashboard"} className="routelink">Dashboard</Link></li>
           <li><Link to={"/addproduct"} className="routelink">Product</Link></li>
           <li><Link to={"/addsale"} className="routelink">Sales</Link></li>
           <li><Link to={"/stock"} className="routelink">Stock</Link></li>
-
         </ul>
+        
+
       </div>
 
       <div className="navbar-right">
@@ -26,8 +36,23 @@ const Navbar = () => {
         <ul className="menu">
         <li><Link to={"/"} className="routelink"><FaUser className="icon"/></Link></li>
         </ul>
+        
+        <div className="mobile-nav-menu">
+          <button className="nav-hamburger" onClick={() => setNavOpen(!navOpen)}>
+            <FaBars />
+          </button>
+          <div className={`nav-dropdown ${navOpen ? 'open' : ''}`}>
+            <Link to={"/dashboard"} className="nav-link" onClick={() => setNavOpen(false)}>Dashboard</Link>
+            <Link to={"/addproduct"} className="nav-link" onClick={() => setNavOpen(false)}>Add Product</Link>
+            <Link to={"/listproduct"} className="nav-link" onClick={() => setNavOpen(false)}>Product List</Link>
+            <Link to={"/addsale"} className="nav-link" onClick={() => setNavOpen(false)}>Add Sale</Link>
+            <Link to={"/listsale"} className="nav-link" onClick={() => setNavOpen(false)}>Sale List</Link>
+            <Link to={"/stock"} className="nav-link" onClick={() => setNavOpen(false)}>Stock</Link>
+          </div>
+        </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
