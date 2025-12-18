@@ -81,7 +81,7 @@ const ProductList = () => {
         brand: editingProduct.brand,
         businessLocation: editingProduct.location,
       };
-      const updated = await updateProductOnServer(editingProductId, updatedProduct);
+      await updateProductOnServer(editingProductId, updatedProduct);
       setTableData((prev) =>
         prev.map((prod) => (prod.id === editingProductId ? { ...prod, ...updatedProduct } : prod))
       );

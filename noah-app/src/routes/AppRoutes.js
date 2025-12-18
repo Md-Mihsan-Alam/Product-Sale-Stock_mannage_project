@@ -11,7 +11,7 @@ import ListSale from '../Pages/Sales/ListSale';
 import AddSaleReturn from '../Pages/Sales/AddSaleReturn';
 import ReturnList from '../Pages/Sales/ReturnList';
 import Stock from '../Pages/Stock/Stock';
-import Non_page_404 from "../Pages/InvalideRoutePage/Non_page_404";
+import NonPage404 from "../Pages/InvalideRoutePage/Non_page_404";
 
 // Layout for authenticated pages
 const ProtectedLayout = ({ children }) => {
@@ -45,7 +45,7 @@ const AppRoutes = () => {
                 <Route path="/addsalereturn" element={<ProtectedLayout><AddSaleReturn /></ProtectedLayout>} />
                 <Route path="/returnlist" element={<ProtectedLayout><ReturnList /></ProtectedLayout>} />
                 <Route path="/stock" element={<ProtectedLayout><Stock /></ProtectedLayout>} />
-                <Route path="*" element={<Non_page_404 />} />
+                <Route path="*" element={<NonPage404 />} />
                 
             </Routes>
         </Router>

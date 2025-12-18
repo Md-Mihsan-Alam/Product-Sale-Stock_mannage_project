@@ -5,7 +5,6 @@ import { FaBell, FaCog, FaEnvelope, FaUser, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   
 

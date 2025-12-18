@@ -255,7 +255,7 @@ const AddProduct = () => {
     } else {
       setBrands([]);
     }
-  }, [category]);
+  }, [category, categoryBrands]);
 
   function generateBarcode() {
     return `Code 128 (${Math.random().toString(36).substring(2, 10).toUpperCase()})`;
