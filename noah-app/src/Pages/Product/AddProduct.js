@@ -222,6 +222,14 @@ import "./Product.css";
 import { saveProductsToServer } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
+const categoryBrands = {
+  Electronics: ["Samsung", "Sony", "Xiaomi", "Apple", "Dell", "HP", "Acer", "Asus"],
+  Furniture: ["IKEA", "Otobi", "Partex", "Navana", "Hatil", "Akhtar", "Otobi", "Pik"],
+  Clothing: ["Zara", "Le Reve", "Rise Brand", "Yellow", "Ecstasy", "Nipun", "Anjan's"],
+  "Home Appliances": ["Philips", "Panasonic", "Walton", "Singer", "Hitachi", "Sharp", "LG"],
+  "Beauty Products": ["The Body Shop", "Loreal", "Kylie", "MAC", "Maybelline", "Revlon", "Nivea"],
+};
+
 const AddProduct = () => {
   const [productName, setProductName] = useState("");
   const [brand, setBrand] = useState("");
@@ -241,21 +249,13 @@ const AddProduct = () => {
     navigate("/listproduct");
   };
 
-  const categoryBrands = {
-    Electronics: ["Samsung", "Sony", "Xiaomi", "Apple", "Dell", "HP", "Acer", "Asus"],
-    Furniture: ["IKEA", "Otobi", "Partex", "Navana", "Hatil", "Akhtar", "Otobi", "Pik"],
-    Clothing: ["Zara", "Le Reve", "Rise Brand", "Yellow", "Ecstasy", "Nipun", "Anjan's"],
-    "Home Appliances": ["Philips", "Panasonic", "Walton", "Singer", "Hitachi", "Sharp", "LG"],
-    "Beauty Products": ["The Body Shop", "Loreal", "Kylie", "MAC", "Maybelline", "Revlon", "Nivea"],
-  };
-
   useEffect(() => {
     if (category) {
       setBrands(categoryBrands[category] || []);
     } else {
       setBrands([]);
     }
-  }, [category, categoryBrands]);
+  }, [category]);
 
   function generateBarcode() {
     return `Code 128 (${Math.random().toString(36).substring(2, 10).toUpperCase()})`;
